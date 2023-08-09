@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../redux/features/cartSlice'
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 
 const Search = () => {
 
@@ -16,7 +16,7 @@ const Search = () => {
 
     const send = (e) => {
         dispatch(addToCart(e));
-        toast.success("item added in yout cart")
+        toast.success("item added in yout cart",{nduration: 4000})
     }
 
 
